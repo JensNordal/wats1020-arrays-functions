@@ -4,7 +4,7 @@
 // longText (a String with several words in it)
 // numWords (an Integer that sets the number of words you want in the returned text) 
 
-function truncateWords(longText, numWords) {
+    function truncateWords(longText, numWords) {
      'use strict';
 
 
@@ -27,18 +27,18 @@ function truncateWords(longText, numWords) {
 
 // 4. Remove those words from the Array
 
-	var removeText = longTextArray.splice(0, numWords);
+    var removeText = longTextArray.splice(0, numWords);
 	
 	
 // 5. Add an additional String item to the Array to put an ellipses in: "..."
 
-	var shortTextArray = [removeText + '...'];
-	
+	removeText.push('...');
+
 
 // 6. Use the join() function to convert the Array back into a String
 
-	var shortText = shortTextArray.join(' ');
-	
+    var shortText = removeText.join(' ');
+
 
 // 7. Return the truncated String from the Function
 
